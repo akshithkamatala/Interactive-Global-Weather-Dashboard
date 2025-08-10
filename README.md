@@ -2,7 +2,7 @@
 
 A dynamic, dark-themed **Power BI** dashboard that fetches real-time weather and air quality data for multiple global cities using the **WeatherAPI.com** service.
 
-This dashboard provides **current weather**, **7-day forecast**, **hourly trends**, **sunrise/sunset times**, and **air quality KPIs** with intuitive visual indicators.
+This dashboard provides **current weather**, **7-day forecast**, **hourly trends**, **sunrise/sunset times**, and **air quality KPIs** with dynamically changing visual indicators.
 
 ---
 
