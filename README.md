@@ -65,6 +65,6 @@ This dashboard provides **current weather**, **7-day forecast**, **hourly trends
 
 ## Files
 
-- [Power BI Dashboard GIF (`.png`)](https://github.com/akshithkamatala/sales-receivables-prediction/blob/main/Alteryx_files/Workflow_snap.png)
-- [Power BI Dashboard Snapshot (`.png`)](https://github.com/akshithkamatala/sales-receivables-prediction/blob/main/Alteryx_files/Workflow_snap.png)
-- [Power BI File (`.yxmd`)](https://github.com/akshithkamatala/sales-receivables-prediction/blob/main/Alteryx_files/data_cleaning.yxmd)
+- [Power BI Dashboard GIF (`.gif`)](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Dashboard.gif)
+- [Power BI Dashboard Snapshot (`.png`)](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Dashboard_snap.png)
+- [Power BI File (`.pbix`)](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Weather_Report.pbix)
