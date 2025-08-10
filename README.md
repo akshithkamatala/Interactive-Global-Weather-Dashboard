@@ -85,8 +85,3 @@ This dashboard provides **current weather**, **7-day forecast**, **hourly trends
 
 ### **Hourly Forecast**
 ![Hourly Forecast](reports/rochester_hourly.png)
-
----
-
-## 📜 License
-MIT
