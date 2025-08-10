@@ -1,70 +1,68 @@
 # Interactive Global Weather Dashboard – Power BI
 
-A dynamic, dark-themed **Power BI** dashboard that fetches real-time weather and air quality data for multiple global cities using the **WeatherAPI.com** service.
+I built a **dark-themed Power BI dashboard** that pulls in **live weather and air quality data** for a bunch of cities around the world using **WeatherAPI.com**.  
 
-This dashboard provides **current weather**, **7-day forecast**, **hourly trends**, **sunrise/sunset times**, and **air quality KPIs** with dynamically changing visual indicators.
+When you open it up, you can see **current weather**, **7-day forecasts**, **hour-by-hour trends**, when the **sun rises and sets**, and even the **air quality index**, all with visuals that actually change depending on the data.
 
 ---
 
-##  Features
+##  What’s Inside
 
 ### **1. City Overview**
-- **City selector** with a button-card layout (Albany, Buffalo, Chicago, …, Paris).
-- Displays **current temperature** in °F, weather condition icon, and “Feels Like” temp.
-- Shows the current situation like "partly Cloudy" and keeps dynamically changing 
-- Auto-updates via **Power BI Service** scheduled refresh.
+- You can pick a city from these little button-cards (Albany, Buffalo, Chicago, … all the way to Paris).  
+- It’ll show you the temperature in °F, an icon for the current condition, and a short line like *“Partly Cloudy”*.  
+- And the best part is it updates automatically if you publish it to the Power BI Service.
 
 ### **2. Forecast Visuals**
-- **7-Day Forecast Strip**: Day names, high/low temps, and condition icons.
-- **Trend Line Chart** for average temperature across the week.
-- **Chance of Rain** and **Chance of Snow** bar charts.
+- Up top there’s a **7-day forecast strip** — you see the day names, highs, lows, and a matching weather icon for each.  
+- I added a **trend line** so you can see how the temperature changes across the week.  
+- Plus, you get **Chance of Rain** and **Chance of Snow** as simple bar charts.
 
 ### **3. Hourly Forecast (Dynamic)**
-- **Show/Hide Hourly Forecast** toggle button.
-- Line chart of hourly temperature for the current day.
+- a **Show/Hide Hourly Forecast** button.  
+- Click it and a line chart pops up showing temperatures hour-by-hour for today.
 
 ### **4. Environmental Data**
-- **Sunrise/Sunset** times.
-- **Air Quality Index (PM10)** gauge with conditional color formatting and one-line description text.
-- Additional KPIs:
-  - Humidity
-  - Wind Speed
-  - Visibility
-  - Feels Like
-  - UV Index
-  - Precipitation
+- I’ve got **sunrise and sunset times**.  
+- The **Air Quality Index** (PM10) is a gauge with color coding and a quick one-line description so you know if it’s good, moderate, or bad.  
+- And a few more quick stats:
+  - Humidity  
+  - Wind Speed  
+  - Visibility  
+  - Feels Like  
+  - UV Index  
+  - Precipitation  
 
 ---
 
-## Data Model
+## How the Data’s Set Up
 
-**Fact Tables**
+I’ve got three main fact tables:
 - `Master_Current_Weather`
 - `Master_Forecast by day_Weather`
 - `Master_Forecast by hour_Weather`
 
-**Dimension Table**
-- `Locations` (city names, country, coordinates)
+Then there’s a `Locations` table with the city names, countries, and coordinates.  
 
-**Supporting Tables**
-- `_Measures` (DAX measures created during the project and grouped in one place)
-- `Weather_data_*` (per-city API imports)
+I also have:
+- `_Measures` — all my DAX measures grouped together.
+- `Weather_data_*` — these are the raw imports for each city.
 
-**Relationship Key**: `location.name`
-
----
-
-## Data Source & Refresh
-
-- **Source**: [WeatherAPI.com](https://www.weatherapi.com/)
-- **Method**: REST API → Power BI Get Data (Web)
-- **Frequency**: Scheduled daily/hourly in Power BI Service
-- **Privacy**: API key stored in Power BI parameter (not in repo)
+They’re all linked together on `location.name`.
 
 ---
 
-## Files
+## Where the Data Comes From
 
-- [Power BI Dashboard GIF (`.gif`)](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Dashboard.gif)
-- [Power BI Dashboard Snapshot (`.png`)](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Dashboard_snap.png)
-- [Power BI File (`.pbix`)](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Weather_Report.pbix)
+- All of this comes from [WeatherAPI.com](https://www.weatherapi.com/).  
+- I connect through **Get Data → Web** in Power BI, hitting the REST API endpoints.  
+- It can refresh daily or hourly once you’ve got it on the Power BI Service.  
+- And don’t worry — my API key is stored in a parameter, so it’s not hanging around in the repo.
+
+---
+
+## What’s in This Repo
+
+- [**Dashboard GIF**](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Dashboard.gif) — a quick walkthrough of the dashboard in action.  
+- [**Dashboard Snapshot**](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Dashboard_snap.png) — just a still image if you want a quick peek.  
+- [**Power BI File (.pbix)**](https://github.com/akshithkamatala/Interactive-Global-Weather-Dashboard/blob/main/Weather_Report.pbix) — the whole thing, so you can open it up and play around.  
